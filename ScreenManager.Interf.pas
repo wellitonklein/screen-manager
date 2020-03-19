@@ -3,8 +3,7 @@ unit ScreenManager.Interf;
 interface
 
 uses
-  FMX.Layouts,
-  System.Classes;
+  FMX.Layouts, FMX.Forms;
 
 type
   IScreenManager = interface;
@@ -17,7 +16,7 @@ type
 
   IScreenManagerMethod = interface
     ['{B18155A9-7425-45E1-A553-B25E70176AFF}']
-    procedure openForm(const layoutMain: TLayout; const aFormClass: TComponentClass);
+    procedure openForm(const layoutMain: TLayout; const aForm: TForm);
     function &EndMethod: IScreenManager;
   end;
 
