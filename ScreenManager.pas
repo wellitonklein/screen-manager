@@ -86,14 +86,8 @@ begin
   // Clean the layout before opening the new screen inside it
   clearLayout(layoutMain);
 
-  // Ensures that every time he opens the screen it will be a new
-  if (Assigned(LForm)) then
-  begin
-    LForm.DisposeOf;
-  end;
-
   // Creates the form to be able to search for the objects
-  lComponent := LForm.FindComponent('LayoutMain');
+  lComponent := aForm.FindComponent('LayoutMain');
 
   // Adds all LayoutMain objects to the main screen's LayoutMain
   if (Assigned(lComponent)) then
