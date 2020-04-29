@@ -81,7 +81,6 @@ end;
 procedure TScreenManager.openForm(const layoutMain: TLayout; const aForm: TForm);
 var
   LComponent: TComponent;
-  LForm: TForm;
 begin
   // Clean the layout before opening the new screen inside it
   clearLayout(layoutMain);
@@ -95,7 +94,9 @@ begin
     layoutMain.AddObject(TLayout(lComponent));
   end;
 
-  FForms.AddOrSetValue(ClassName, LForm);
+  FForms.AddOrSetValue(ClassName, aForm);
+
+  aForm.Hide;
 end;
 
 end.
