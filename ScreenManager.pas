@@ -95,6 +95,7 @@ begin
   end;
 
   FForms.AddOrSetValue(ClassName, aForm);
+  aForm.Hide;
 end;
 
 end.
